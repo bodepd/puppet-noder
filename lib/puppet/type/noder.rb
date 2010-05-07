@@ -63,6 +63,11 @@ Puppet::Type.newtype(:noder) do
   newparam(:type) do
     desc "this is how ec2 qualifies machine strength, I would rather use memory or ncpus or something else..."
   end
+
+  newparam(:sync) do
+    desc 'rather or not to wait until images exist, defaults to true'
+    defaultto true
+  end
  
 #  newparam(:group) do
 #    desc "node group that will be used for parameterization"
